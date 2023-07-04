@@ -1,0 +1,409 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "iManageResourceBlockVolume",
+    "description" : "iManageResourceBlockVolume service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/imanage/oci/resource/updateattachement/blockvolume/{tenancyOcId}&&{volumeAttachmentOcId}" : {
+      "put" : {
+        "summary" : "putIManageResourceBlockVolume",
+        "description" : "putIManageResourceBlockVolume",
+        "operationId" : "put-imanage-oci-resource-updateattachement-blockvolume",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/updateBlockVolumeAttachement"
+          },
+          "required" : true
+        }, {
+          "name" : "volumeAttachmentOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "tenancyOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      }
+    },
+    "/imanage/oci/resource/provision/blockvolume/{tenancyOcId}" : {
+      "post" : {
+        "summary" : "postIManageResourceBlockVolume",
+        "description" : "postIManageResourceBlockVolume",
+        "operationId" : "post-imanage-oci-resource-provision-blockvolume",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/inputBlockVolumeProvision"
+          },
+          "required" : true
+        }, {
+          "name" : "header1",
+          "in" : "header",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "tenancyOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      }
+    },
+    "/imanage/oci/resource/update/blockvolume/{tenancyOcId}&&{blockvolumeOcId}" : {
+      "put" : {
+        "summary" : "putIManageResourceBlockVolume",
+        "description" : "putIManageResourceBlockVolume",
+        "operationId" : "put-imanage-oci-resource-update-blockvolume",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/updateBlockVolume"
+          },
+          "required" : true
+        }, {
+          "name" : "header1",
+          "in" : "header",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "blockvolumeOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "tenancyOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      }
+    },
+    "/imanage/oci/resource/attach/blockvolume/{tenancyOcId}&&{blockvolumeOcId}" : {
+      "post" : {
+        "summary" : "postIManageResourceBlockVolume",
+        "description" : "postIManageResourceBlockVolume",
+        "operationId" : "post-imanage-oci-resource-attach-blockvolume",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/inputBlockVolumeAttach"
+          },
+          "required" : true
+        }, {
+          "name" : "blockvolumeOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "tenancyOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      }
+    },
+    "/imanage/oci/resource/delete/blockvolume/{tenancyOcId}&&{blockvolumeOcId}" : {
+      "delete" : {
+        "summary" : "deleteIManageResourceBlockVolume",
+        "description" : "deleteIManageResourceBlockVolume",
+        "operationId" : "delete-imanage-oci-resource-delete-blockvolume",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "header1",
+          "in" : "header",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "blockvolumeOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "tenancyOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      }
+    },
+    "/imanage/oci/resource/detach/blockvolume/{tenancyOcId}&&{volumeAttachmentOcId}" : {
+      "delete" : {
+        "summary" : "deleteIManageResourceBlockVolume",
+        "description" : "deleteIManageResourceBlockVolume",
+        "operationId" : "delete-imanage-oci-resource-detach-blockvolume",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "volumeAttachmentOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "tenancyOcId",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "updateBlockVolumeAttachement" : {
+      "type" : "object",
+      "properties" : {
+        "iscsiLoginState" : {
+          "type" : "string"
+        }
+      }
+    },
+    "blockVolumeAttach" : {
+      "type" : "object",
+      "required" : [ "RequireCHAPcredentials", "AttachmentType", "AutomaticallyConnectISCSIvolumes", "InstanceOcId" ],
+      "properties" : {
+        "DevicePath" : {
+          "type" : "string"
+        },
+        "InstanceOcId" : {
+          "type" : "string"
+        },
+        "AttachmentType" : {
+          "type" : "string"
+        },
+        "UseInTransitEncryption" : {
+          "type" : "boolean"
+        },
+        "RequireCHAPcredentials" : {
+          "type" : "boolean"
+        },
+        "AutomaticallyConnectISCSIvolumes" : {
+          "type" : "boolean"
+        },
+        "Access" : {
+          "$ref" : "#/definitions/Access"
+        },
+        "Name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "required" : [ "code" ],
+      "properties" : {
+        "code" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "errorDeatils" : {
+          "$ref" : "#/definitions/errorDeatils"
+        }
+      }
+    },
+    "errorDeatils" : {
+      "type" : "object",
+      "properties" : {
+        "details" : {
+          "type" : "string"
+        },
+        "providedValue" : {
+          "type" : "string"
+        },
+        "system" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Access" : {
+      "type" : "object",
+      "properties" : {
+        "ReadOnly" : {
+          "type" : "boolean"
+        },
+        "Shareble" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "updateBlockVolume" : {
+      "type" : "object",
+      "required" : [ "volumePerformance", "autotuneType", "name", "newProjectOcId", "blockVolumeReplicas", "volumeSize" ],
+      "properties" : {
+        "newProjectOcId" : {
+          "type" : "string"
+        },
+        "autotuneType" : {
+          "type" : "string"
+        },
+        "blockVolumeReplicas" : {
+          "$ref" : "#/definitions/blockVolumeReplicas"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "volumeSize" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "volumePerformance" : {
+          "type" : "string"
+        }
+      }
+    },
+    "blockVolumeProvision" : {
+      "type" : "object",
+      "required" : [ "projectOcId" ],
+      "properties" : {
+        "projectOcId" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "sourceDetails" : {
+          "type" : "string"
+        },
+        "volumeSize" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "autotuneType" : {
+          "type" : "string"
+        },
+        "availabilityDomain" : {
+          "type" : "string"
+        },
+        "backupPolicyOcId" : {
+          "type" : "string"
+        },
+        "blockVolumeReplicas" : {
+          "$ref" : "#/definitions/blockVolumeReplicas"
+        },
+        "kmsKeyId" : {
+          "type" : "string"
+        },
+        "volumePerformance" : {
+          "type" : "string"
+        }
+      }
+    },
+    "blockVolumeReplicas" : {
+      "type" : "object",
+      "required" : [ "availabilityDomain" ],
+      "properties" : {
+        "availabilityDomain" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "inputBlockVolumeProvision" : {
+      "type" : "object",
+      "required" : [ "blockVolumeProvision" ],
+      "properties" : {
+        "blockVolumeProvision" : {
+          "$ref" : "#/definitions/blockVolumeProvision"
+        }
+      }
+    },
+    "inputBlockVolumeAttach" : {
+      "type" : "object",
+      "required" : [ "blockVolumeAttach" ],
+      "properties" : {
+        "blockVolumeAttach" : {
+          "$ref" : "#/definitions/blockVolumeAttach"
+        }
+      }
+    }
+  }
+}
